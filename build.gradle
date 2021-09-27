@@ -3,11 +3,14 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'war'
+    id "com.microsoft.azure.azurewebapp" version "1.1.0"
 }
 
 group = 'com.yannickroubieu'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+
+
 
 repositories {
     mavenCentral()
@@ -27,4 +30,17 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+azurewebapp {
+    subscription = 'subscriptions/bdfd1138-6c81-44e0-8d99-d9770de63d89'
+    resourceGroup = 'RessourceSpringBoot'
+    appName = 'filmoz'
+    pricingTier = 'Azure subscription 1'
+    region = 'France-Centre'
+    runtime {
+        os = 'Windows'
+        webContainer = 'Tomcat 9.0' // or 'Java SE' if you want to run an executable jar
+        javaVersion = 'Java 8'
+    }
 }
