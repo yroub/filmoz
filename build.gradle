@@ -23,7 +23,7 @@ dependencies {
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.53' //IMPORTANT:mettre votre version de tomcat version
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
     implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.4'
-    compileOnly 'javax.servlet:jstl:1.2'
+    implementation 'javax.servlet:jstl:1.2'
 
 
 }
